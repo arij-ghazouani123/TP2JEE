@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Damier</title>
 </head>
 <body>
-<h2> Danier de 10 linges et 10 colones</h2>
+<h2> Damier de 10 linges et 10 colones</h2>
 <table border="2" size="100%">
 <%
 String color="";
