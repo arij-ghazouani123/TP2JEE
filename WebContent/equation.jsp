@@ -8,20 +8,28 @@
 </head>
 <body>
 <%
-Float x;
-Float a=Float.parseFloat(request.getParameter("t1"));
-Float b=Float.parseFloat(request.getParameter("t2"));
-Float c=Float.parseFloat(request.getParameter("t3"));
-
-Float delta = Math.pow(a, 2)-4*a*c;
-if ((delta)>=0)
+Float a = Float.parseFloat(request.getParameter("a"));
+Float b = Float.parseFloat(request.getParameter("b"));
+Float c = Float.parseFloat(request.getParameter("c"));
+Float d = b*b-4*a*c;
+if (d<0)
 {
-	Float x1 = (-b-Math.sqrt(delta)/(2*a);		
-	
-}
-if ((Math.pow(a, 2)-4*a*c)==0)
-{	
-	}
 %>
+<body bgcolor="red">
+<p> Pas de solutions réelles</p>
+<%
+} else if (d==0) { 
+%>
+<body bgcolor="white">
+<p> Une unique solution : X = <%= b/(2*a) %></p>
+<%
+} else {%>
+<body bgcolor="green">
+<p> Deux solutions :</p>
+<ul>
+<li>X1 = <%= -b-Math.sqrt(d)/(2*a) %></li>
+<li>X2 = <%= -b+Math.sqrt(d)/(2*a) %></li>
+</ul>
+<% } %>
 </body>
-</html>
+</html> 

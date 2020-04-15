@@ -7,21 +7,21 @@
 <title>Damier</title>
 </head>
 <body>
-<h2> Damier de 10 linges et 10 colones</h2>
+<h2> Damier de 10 linges et 10 colonnes</h2>
 <table border="2" size="100%">
 <%
 String color="";
 for (int l=1;l<11;l++) {	
 %>
 <tr>
-<% if ((l%2)==0) color="BLACK"; else color="BLUE"; %>
+<% if ((l%2)==0) color="BLACK"; else color="aqua"; %>
   <%
   for (int c=1;c<11;c++) {
 	  if(c%2==0)
 %>
-<td bgcolor=<%= color %> width="20px" height="20px"></td>
+<td bgcolor=<%= color %> width="30px" height="30px"></td>
 <%if(color.equals("BLACK")){
-	color="BLUE" ; }
+	color="aqua" ; }
 	else {
 	color="BLACK"; }%>
 <% }%> </tr> <% } %>
